@@ -2,16 +2,15 @@ import TaskStore from "../stores/taskStore";
 import Task from "./Task";
 import { observer } from "mobx-react-lite";
 
-const TaskList = () => {
-  const TaskList = TaskStore.tasks
-    .filter((task) => !task.done)
+const DoneList = () => {
+  const DoneList = TaskStore.tasks
+    .filter((task) => task.done)
     .map((task) => <Task task={task} />);
     
-
   return <div> 
-  <h3>Tasks to do</h3>
-  <ul>{TaskList}</ul>
+  <h3>Tasks done</h3>
+  <ul>{DoneList}</ul>
   </div>;
 };
 
-export default observer(TaskList);
+export default observer(DoneList);
