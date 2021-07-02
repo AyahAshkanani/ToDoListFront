@@ -4,7 +4,7 @@ import { TaskTitle } from "../styles";
 
 const Donetask = (props) => {
   return (
-    <TaskTitle>
+    <TaskTitle className="done">
       <Checkbox
         disabled
         checked

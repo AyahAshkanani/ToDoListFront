@@ -36,6 +36,11 @@ export const ListTitle = styled.h3`
 export const TaskTitle = styled.p`
   font-size: 20px;
   font-weight: 500;
+
+  &.done {
+    text-decoration: line-through;
+    color: ${(props) => props.theme.lightColor};
+  }
 `;
 
 export const WorkTag = styled(Chip)`
