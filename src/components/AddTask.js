@@ -1,4 +1,4 @@
-import { TextField, MenuItem, Button } from "@material-ui/core";
+import { TextField, MenuItem } from "@material-ui/core";
 import { AddTaskButtonStyled } from "../styles";
 
 const AddTask = (props) => {
@@ -15,9 +15,9 @@ const AddTask = (props) => {
 
         <TextField
           id="select-tag"
+          name="tag"
           select
           label="Tag"
-          value="none"
           style={{ width: "7.9%", color: "#C2C2C2" }}
           //   onChange={handleChange}
           //   helperText="tag"
@@ -30,12 +30,10 @@ const AddTask = (props) => {
         </TextField>
         <TextField
           id="select-priority"
+          name="priority"
           select
           label="Priority"
-          value="none"
           style={{ width: "7.9%" }}
-          //   onChange={handleChange}
-          //   helperText="Priority"
         >
           {priorities.map((option) => (
             <MenuItem key={option} value={option}>
@@ -43,12 +41,6 @@ const AddTask = (props) => {
             </MenuItem>
           ))}
         </TextField>
-        {/* <Button
-          variant="contained"
-          style={{ color: "#474747", fontSize: 20, width: 20, marginLeft: 20 }}
-        >
-          +
-        </Button> */}
         <AddTaskButtonStyled> +</AddTaskButtonStyled>
       </form>
     </div>

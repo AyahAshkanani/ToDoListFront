@@ -21,7 +21,7 @@ const Task = (props) => {
       />
 
       {props.task.title}
-      {props.task.hasOwnProperty("tag") && props.task.tag === "work" ? (
+      {props.task.tag === "work" ? (
         <WorkTag
           label="work"
           style={{ backgroundColor: "#3058FF", color: "white", height: 20 }}
@@ -29,8 +29,7 @@ const Task = (props) => {
       ) : (
         ""
       )}
-
-      {props.task.hasOwnProperty("tag") && props.task.tag === "home" ? (
+      {props.task.tag === "home" ? (
         <HomeTag
           label="home"
           style={{ backgroundColor: "#EE3585", color: "white", height: 20 }}
@@ -38,7 +37,7 @@ const Task = (props) => {
       ) : (
         ""
       )}
-      {props.task.hasOwnProperty("priority") ? (
+      {props.task.tag !== "none" ? (
         <AiOutlineWarningStyled
           size="25px"
           className={props.task.priority}
