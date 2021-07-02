@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Description } from "../styles";
+import { Title } from "../styles";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 

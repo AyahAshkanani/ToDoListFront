@@ -1,11 +1,12 @@
 import TaskStore from "../stores/taskStore";
 import Task from "./Task";
+import DoneTask from "./DoneTask";
 import { observer } from "mobx-react-lite";
 
 const DoneList = () => {
   const DoneList = TaskStore.tasks
     .filter((task) => task.done)
-    .map((task) => <Task task={task} />);
+    .map((task) => <DoneTask task={task} />);
 
   return (
     <div>
