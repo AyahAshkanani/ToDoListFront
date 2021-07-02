@@ -20,7 +20,7 @@ const theme = {
 
 function App() {
   return (
-    <div>
+    <div style={{ paddingTop: 20, paddingLeft: 40 }}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Home />

@@ -8,12 +8,12 @@ body{
 
 export const Title = styled.h1`
   color: ${(props) => props.theme.mainColor};
-  text-align: center;
+  text-align: left;
   font-weight: bold;
-  font-style: italic;
-  font-size: 75px;
+  ${"" /* font-style: italic; */}
+  font-size: 45px;
   margin-top: -25px;
-  padding-top: 4%;
+  padding-top: 18%;
 `;
 
 export const Description = styled.h4`
