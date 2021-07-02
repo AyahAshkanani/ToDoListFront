@@ -42,10 +42,10 @@ export const HomeTag = styled(Chip)`
 export const AiOutlineWarningStyled = styled(AiOutlineWarning)`
   size: 4.7em;
   margin-left: 0.3em;
-  &.highPriority {
+  &.high {
     color: ${(props) => props.theme.highPriorityColor};
   }
-  &.lowPriority {
+  &.low {
     color: ${(props) => props.theme.lowPriorityColor};
   }
 `;

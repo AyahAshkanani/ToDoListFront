@@ -8,6 +8,27 @@ import {
 } from "../styles";
 
 const Task = (props) => {
+  const hasTag = () => {
+    if (props.task.hasOwnProperty("tag")) {
+      console.log("has tag");
+      if (props.task.task === "work") {
+        return (
+          <WorkTag
+            label="work"
+            style={{ backgroundColor: "#3058FF", color: "white", height: 20 }}
+          ></WorkTag>
+        );
+      } else if (props.task.task === "home") {
+        return (
+          <HomeTag
+            label="work"
+            style={{ backgroundColor: "#EE3585", color: "white", height: 20 }}
+          ></HomeTag>
+        );
+      }
+    }
+  };
+
   return (
     <p>
       <Checkbox
@@ -15,18 +36,33 @@ const Task = (props) => {
         inputProps={{ "aria-label": "checkbox with default color" }}
         style={{ color: "#C2C2C2" }}
       />
-      {props.task.title}{" "}
-      {/* if it has a tag, see which. <WorkTag> or <HomeTag>*/}
-      <WorkTag
-        label="work"
-        style={{ backgroundColor: "#3058FF", color: "white", height: 20 }}
-      ></WorkTag>
-      {/* if it has a priority, see which. className="lowPriority" or   className="highPriority"*/}
-      <AiOutlineWarningStyled
-        size="25px"
-        className="lowPriority"
-        style={{ verticalAlign: "middle" }}
-      ></AiOutlineWarningStyled>
+      {props.task.title}
+      {props.task.hasOwnProperty("tag") && props.task.tag === "work" ? (
+        <WorkTag
+          label="work"
+          style={{ backgroundColor: "#3058FF", color: "white", height: 20 }}
+        ></WorkTag>
+      ) : (
+        ""
+      )}
+      {props.task.hasOwnProperty("tag") && props.task.tag === "home" ? (
+        <HomeTag
+          label="home"
+          style={{ backgroundColor: "#EE3585", color: "white", height: 20 }}
+        ></HomeTag>
+      ) : (
+        ""
+      )}
+      {props.task.hasOwnProperty("priority") ? (
+        <AiOutlineWarningStyled
+          size="25px"
+          className={props.task.priority}
+          style={{ verticalAlign: "middle" }}
+        ></AiOutlineWarningStyled>
+      ) : (
+        ""
+      )}
+
       <IoMdCloseStyled></IoMdCloseStyled>
     </p>
   );
