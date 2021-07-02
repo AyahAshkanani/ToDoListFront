@@ -77,3 +77,27 @@ export const IoMdCloseStyled = styled(IoMdClose)`
   size: 4.7em;
   color: ${(props) => props.theme.lightColor};
 `;
+
+export const AddTaskButtonStyled = styled.button`
+  font-size: 1.5em;
+  float: right;
+  ${"" /* margin-right: 5px; */}
+  display: inline-block;
+
+  ${"" /* margin: 1.25em; */}
+  border: 1px solid;
+  padding-top: 0.22em;
+  padding-bottom: 0.22em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  margin-top: 0.4em;
+  margin-left: 30px;
+  border-radius: 30px;
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.secondaryColor};
+
+  &:hover {
+    background-color: ${(props) => props.theme.secondaryColor};
+    color: ${(props) => props.theme.backgroundColor};
+  }
+`;
