@@ -14,8 +14,8 @@ export const Title = styled.h1`
   text-align: left;
   font-weight: bold;
   ${"" /* font-style: italic; */}
-  font-size: 45px;
-  margin-top: -28px;
+  font-size: 40px;
+  margin-top: -18px;
   padding-top: 18%;
 `;
 
