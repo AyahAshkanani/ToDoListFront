@@ -26,11 +26,9 @@ function App() {
         <Home />
 
         <div>
-          {/* <h3>Tasks To Do</h3> */}
           <TasksList />
         </div>
         <div>
-          {/* <h3>Done Tasks</h3> */}
           <DoneList />
         </div>
       </ThemeProvider>

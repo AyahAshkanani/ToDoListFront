@@ -43,6 +43,12 @@ export const TaskTitle = styled.p`
   }
 `;
 
+export const DeleteTag = styled(Chip)`
+  ${"" /* background: ${(props) => props.theme.workTagColor}; */}
+  margin-right: 5px;
+  margin-left: 5px;
+`;
+
 export const WorkTag = styled(Chip)`
   ${"" /* background: ${(props) => props.theme.workTagColor}; */}
   margin-right: 5px;
