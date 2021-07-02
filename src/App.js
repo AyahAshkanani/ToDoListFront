@@ -14,6 +14,8 @@ const theme = {
   lightColor: "#C2C2C2",
   workTagColor: "#3058FF",
   homeTagColor: "#EE3585",
+  highPriorityColor: "#FF4828",
+  lowPriorityColor: "#FFC628",
 };
 
 function App() {
