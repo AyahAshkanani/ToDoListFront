@@ -1,9 +1,10 @@
 import { observer } from "mobx-react";
 import Checkbox from "@material-ui/core/Checkbox";
+import { TaskTitle } from "../styles";
 
 const Donetask = (props) => {
   return (
-    <p>
+    <TaskTitle>
       <Checkbox
         disabled
         checked
@@ -11,7 +12,7 @@ const Donetask = (props) => {
         style={{ color: "#54E454" }}
       />
       {props.task.title}
-    </p>
+    </TaskTitle>
   );
 };
 

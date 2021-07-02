@@ -1,5 +1,6 @@
 import TaskStore from "../stores/taskStore";
 import Task from "./Task";
+import { ListTitle } from "../styles";
 import { observer } from "mobx-react-lite";
 
 const TaskList = () => {
@@ -9,7 +10,7 @@ const TaskList = () => {
 
   return (
     <div>
-      <h3>TO DO</h3>
+      <ListTitle>TO DO</ListTitle>
       <ul>{TaskList}</ul>
     </div>
   );

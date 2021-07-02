@@ -5,32 +5,12 @@ import {
   AiOutlineWarningStyled,
   HomeTag,
   IoMdCloseStyled,
+  TaskTitle,
 } from "../styles";
 
 const Task = (props) => {
-  const hasTag = () => {
-    if (props.task.hasOwnProperty("tag")) {
-      console.log("has tag");
-      if (props.task.task === "work") {
-        return (
-          <WorkTag
-            label="work"
-            style={{ backgroundColor: "#3058FF", color: "white", height: 20 }}
-          ></WorkTag>
-        );
-      } else if (props.task.task === "home") {
-        return (
-          <HomeTag
-            label="work"
-            style={{ backgroundColor: "#EE3585", color: "white", height: 20 }}
-          ></HomeTag>
-        );
-      }
-    }
-  };
-
   return (
-    <p>
+    <TaskTitle>
       <Checkbox
         color="default"
         inputProps={{ "aria-label": "checkbox with default color" }}
@@ -64,7 +44,7 @@ const Task = (props) => {
       )}
 
       <IoMdCloseStyled></IoMdCloseStyled>
-    </p>
+    </TaskTitle>
   );
 };
 

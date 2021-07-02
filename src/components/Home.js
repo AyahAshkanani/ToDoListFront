@@ -9,8 +9,8 @@ const Home = () => {
     <div style={{ display: "inline-block" }}>
       <div
         style={{
-          width: 150,
-          height: 150,
+          width: 130,
+          height: 130,
           float: "left",
           padding: 30,
           fontWeight: "bolder",

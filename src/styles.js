@@ -15,7 +15,7 @@ export const Title = styled.h1`
   font-weight: bold;
   ${"" /* font-style: italic; */}
   font-size: 45px;
-  margin-top: -25px;
+  margin-top: -28px;
   padding-top: 18%;
 `;
 
@@ -25,6 +25,17 @@ export const Description = styled.h4`
   margin-top: -30px;
   margin-bottom: 30px;
   padding-top: 3%;
+`;
+
+export const ListTitle = styled.h3`
+  margin-left: 53px;
+  font-weight: bold;
+  font-size: 25px;
+`;
+
+export const TaskTitle = styled.p`
+  font-size: 20px;
+  font-weight: 500;
 `;
 
 export const WorkTag = styled(Chip)`
