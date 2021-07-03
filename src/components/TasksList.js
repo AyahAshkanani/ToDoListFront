@@ -10,7 +10,8 @@ const TaskList = () => {
 
   return (
     <div>
-      <ListTitle>TO DO</ListTitle>
+      {TaskList.length !== 0 ? <ListTitle>TO DO</ListTitle> : ""}
+
       <ul>{TaskList}</ul>
     </div>
   );

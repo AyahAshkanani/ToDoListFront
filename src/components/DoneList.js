@@ -10,7 +10,8 @@ const DoneList = () => {
 
   return (
     <div>
-      <ListTitle>COMPLETED</ListTitle>
+      {DoneList.length !== 0 ? <ListTitle>COMPLETED</ListTitle> : ""}
+
       <ul>{DoneList}</ul>
     </div>
   );

@@ -2,8 +2,9 @@ import Checkbox from "@material-ui/core/Checkbox";
 import taskStore from "../../stores/taskStore";
 
 const TaskCheckBox = (props) => {
-  const handleCheck = () => {
+  const handleCheck = (event) => {
     taskStore.taskUpdate(props.task);
+    event.target.checked = false;
   };
   return (
     <Checkbox
