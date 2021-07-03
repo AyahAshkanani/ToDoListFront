@@ -2,9 +2,18 @@ import React from "react";
 import { Title } from "../styles";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { observer } from "mobx-react";
+import TaskStore from "../stores/taskStore";
+import { floor } from "lodash";
 
 const Home = () => {
-  const percentage = 66;
+  const doneList = TaskStore.tasks.filter((task) => task.done);
+  const toDoList = TaskStore.tasks.filter((task) => !task.done);
+
+  const percentage = floor(
+    (doneList.length / (doneList.length + toDoList.length)) * 100
+  );
+
   return (
     <div style={{ display: "inline-block" }}>
       <div
@@ -33,4 +42,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default observer(Home);
