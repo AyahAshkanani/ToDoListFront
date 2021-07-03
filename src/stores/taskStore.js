@@ -44,13 +44,9 @@ class TaskStore {
 
   taskUpdate = async (updateTask) => {
     try {
-      await axios.put(
-        `http://localhost:8000/cakes/${updateTask.id}`,
-        updateTask
-      );
+      await axios.put(`http://localhost:8000/tasks/${updateTask.id}`);
       const task = this.tasks.find((task) => task.id === updateTask.id);
-      task.done = updateTask.done;
-      // task.slug = slugify(updateTask.name);
+      task.done = true;
     } catch (error) {
       console.error(error);
     }
