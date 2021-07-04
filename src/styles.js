@@ -43,6 +43,20 @@ export const TaskTitle = styled.p`
   }
 `;
 
+export const DeleteButtonStyled = styled.button`
+  color: white;
+  background-color: black;
+  width: 90px;
+  
+  margin-bottom:20px;
+  border-radius: 5px;
+  &:hover {
+    color: black;
+    background-color: white;
+  }
+
+`;
+
 export const DeleteTag = styled(Chip)`
   ${"" /* background: ${(props) => props.theme.workTagColor}; */}
   margin-right: 5px;
@@ -99,5 +113,16 @@ export const AddTaskButtonStyled = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.secondaryColor};
     color: ${(props) => props.theme.backgroundColor};
+  }
+`;
+
+export const TaskWrapper = styled.div`
+  margin: 20px;
+  
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+    
   }
 `;

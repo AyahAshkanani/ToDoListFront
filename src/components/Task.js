@@ -1,20 +1,20 @@
 import { observer } from "mobx-react";
 import Delete from "@material-ui/icons/Delete";
 import TaskCheckBox from "./Buttons/TaskCheckBox";
-import { WorkTag, AiOutlineWarningStyled, HomeTag, TaskTitle } from "../styles";
+import { WorkTag, AiOutlineWarningStyled, HomeTag, TaskTitle,  } from "../styles";
+import { IconButton } from "@material-ui/core";
+
+// import DeleteButton from "./Buttons/DeleteButton";
 
 const Task = (props) => {
   return (
     <TaskTitle>
       <TaskCheckBox task={props.task}></TaskCheckBox>
-      <Delete
-        color="default"
-        inputProps={{ "aria-label": "checkbox with default color" }}
-        style={{ color: "#C2C2C2", float: "right", height: 20 }}
-        // padding:20
-      />
-
       {props.task.title}
+      <IconButton><Delete onClick={props.task.id} color="default" inputProps={{ "aria-label": "checkbox with default color" }} style={{ color: "#C2C2C2", float: "right", height: 20 }} 
+      />
+</IconButton> 
+      
       {props.task.tag === "work" ? (
         <WorkTag
           label="work"
