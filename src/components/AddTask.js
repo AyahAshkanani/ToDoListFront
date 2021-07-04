@@ -19,11 +19,10 @@ const handleChange = (event) => {
 const handleSubmit = (event) => {
 event.preventDefault();
  taskStore.taskCreate(task);
-// setTask({
-  // title:"",
-  // tag:"none",
-  // priority:"none",
-// });
+ event.target.reset();
+//  setTask({ tag:"none", priority:"none" });
+
+ 
 };
 
 

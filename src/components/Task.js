@@ -24,7 +24,7 @@ const Task = (props) => {
       ) : (
         ""
       )}
-      {props.task.tag !== "none" ? (
+      {props.task.priority !== "none" ? (
         <AiOutlineWarningStyled
           size="25px"
           className={props.task.priority}
