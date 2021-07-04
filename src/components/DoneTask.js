@@ -1,18 +1,12 @@
 import { observer } from "mobx-react";
-import Checkbox from "@material-ui/core/Checkbox";
 import { TaskTitle } from "../styles";
 import DeleteButton from "./Buttons/DeleteButton";
+import DoneCheckBox from "./DoneCheckBox";
 
 const Donetask = (props) => {
   return (
     <TaskTitle className="done">
-      <Checkbox
-        disabled
-        checked
-        check
-        inputProps={{ "aria-label": "checkbox with default color" }}
-        style={{ color: "#54E454" }}
-      />
+      <DoneCheckBox task={props.task}></DoneCheckBox>
       {props.task.title}
       <DeleteButton taskID={props.task.id} />
     </TaskTitle>
