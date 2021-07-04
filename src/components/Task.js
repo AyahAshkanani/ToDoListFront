@@ -1,5 +1,4 @@
 import { observer } from "mobx-react";
-import { IconButton } from "@material-ui/core";
 import DeleteButton from "./Buttons/DeleteButton";
 import TaskCheckBox from "./Buttons/TaskCheckBox";
 import { WorkTag, AiOutlineWarningStyled, HomeTag, TaskTitle } from "../styles";

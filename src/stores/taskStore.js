@@ -1,5 +1,4 @@
 import { makeAutoObservable } from "mobx";
-// import slugify from "react-slugify";
 import axios from "axios";
 
 class TaskStore {
