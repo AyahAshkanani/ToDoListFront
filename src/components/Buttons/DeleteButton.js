@@ -1,13 +1,13 @@
 
 import taskStore from "../../stores/taskStore";
-import { DeleteButtonStyled } from "../../styles";
+import Delete from "@material-ui/icons/Delete";
 
 const DeleteButton = (props) => {
-  const deleteTask = () => {
-    taskStore.deleteTask(props.taskID);
+  const taskDelete = () => {
+    taskStore.taskDelete(props.taskID);
   };
   return (
-    <DeleteButtonStyled onClick={deleteTask}/> 
+    <Delete onClick={taskDelete}/> 
   );
 };
 

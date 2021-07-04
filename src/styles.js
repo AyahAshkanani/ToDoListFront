@@ -46,13 +46,18 @@ export const TaskTitle = styled.p`
 export const DeleteButtonStyled = styled.button`
   color: white;
   background-color: black;
-  width: 90px;
+  width: 40px;
+  height: 40px;
   
   margin-bottom:20px;
   border-radius: 5px;
   &:hover {
-    color: black;
-    background-color: white;
+    background-color: transparent;
+    color: grey;
+    ${'' /* background-color: rgbargba(black, 0.5); */}
+    ${'' /* color: black;
+    background-color: white; */}
+    background-color-opacity: 5%;
   }
 
 `;
