@@ -4,7 +4,6 @@ import { IconButton } from "@material-ui/core";
 
 const DeleteButton = (props) => {
   const handleDelete = () => {
-    console.log("handle delete");
     taskStore.taskDelete(props.taskID);
   };
   return (

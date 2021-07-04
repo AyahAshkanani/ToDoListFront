@@ -13,7 +13,6 @@ class TaskStore {
     try {
       const response = await axios.get("http://localhost:8000/tasks");
       this.tasks = response.data;
-      console.log(this.tasks);
     } catch (error) {
       console.error("fetchTask: ", error);
     }
@@ -34,7 +33,6 @@ class TaskStore {
     try {
       //if no priority or tag selected, make them none
       const response = await axios.post("http://localhost:8000/tasks", newTask);
-      console.log(response);
       this.tasks.push(response.data);
     } catch (error) {
       console.error(error);
