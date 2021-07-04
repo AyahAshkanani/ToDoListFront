@@ -1,7 +1,6 @@
 import { observer } from "mobx-react";
 import Checkbox from "@material-ui/core/Checkbox";
 import { TaskTitle } from "../styles";
-import { IconButton } from "@material-ui/core";
 import DeleteButton from "./Buttons/DeleteButton";
 
 const Donetask = (props) => {
