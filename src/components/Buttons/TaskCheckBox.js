@@ -4,7 +4,7 @@ import taskStore from "../../stores/taskStore";
 const TaskCheckBox = (props) => {
   const handleCheck = (event) => {
     taskStore.taskUpdate(props.task);
-    event.target.checked = true ;
+    event.target.checked = false;
   };
   return (
     <Checkbox
